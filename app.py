@@ -5,6 +5,7 @@ from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
+
 @app.route('/send-email', methods=['POST'])
 def send_email():
     try:
@@ -38,4 +39,4 @@ def send_email():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5511, debug=True)
